@@ -1,0 +1,27 @@
+.card {
+  box-shadow: 3px 3px 3px rgba($color: #ccc, $alpha: 0.5);
+  border: none !important;
+  padding: 0.5rem 1rem;
+}
+
+.avatar-xl {
+  width: 100%;
+  max-width: 15rem !important;
+  min-width: 7rem;
+  min-height: 7rem;
+}
+
+.board-desc {
+  text-align: center;
+}
+
+.menu {
+  li {
+    cursor: pointer;
+    padding: 0.4rem;
+    &:hover {
+      background-color: $primary-color;
+      color: white;
+    }
+  }
+}

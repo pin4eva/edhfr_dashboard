@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ApolloProvider } from "@apollo/react-hooks";
+import { ThemeProvider } from "@chakra-ui/core";
+import { ThemeProvider as EmotionTheme } from "emotion-theming";
+import React, { Fragment } from "react";
+import Head from "react-helmet";
+import "styles/index.scss";
+import theme from "theme";
+import client from "./apollo";
+import Routes from "./Router";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Head>
+        <link rel="stylesheet" href="/nprogress.css" />
+      </Head>
+      <ApolloProvider client={client}>
+        <ThemeProvider theme={theme}>
+          <EmotionTheme theme={theme}>
+            <Routes />
+          </EmotionTheme>
+        </ThemeProvider>
+      </ApolloProvider>
+    </Fragment>
   );
-}
+};
 
 export default App;

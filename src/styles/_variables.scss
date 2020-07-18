@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+$primary-color: #ff9f2f;
+$secondary-color: #c4c4c4;
+$muted: #6c757d;
+$dark: #1b1b1b;
+$lime: #ebffeb;
+$light-gray: #f2f2f2;
+$text-color: #474d47;
+$info: #18898d;
+$blue: #2f69ff;
+
+h1 {
+  font-size: 2.5rem !important;
+}
+h2 {
+  font-size: 2.2rem !important;
+}
+h3 {
+  font-size: 2rem !important;
+}
+h4 {
+  font-size: 1.8rem !important;
+}
+h5 {
+  font-size: 1.5rem !important;
+}
+h6 {
+  font-size: 1.2rem !important;
+  font-weight: bold !important;
+  margin: 1rem 0 !important;
+}
+
+#__next {
+  height: 100% !important;
+}
+
+body {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 14px !important;
+  color: $text-color !important;
+  height: 100% !important;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.bg-lime {
+  background: $lime;
+}
+
+.bg-light-gray {
+  background: $light-gray;
+}
+.text-light-gray {
+  color: $light-gray;
+}
+.text-inherit {
+  color: inherit !important;
+}
+
+.text-18 {
+  font-size: 1.125rem;
+}
+
+.text-small {
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  color: white !important;
+}
+
+.btn-blue {
+  background-color: $blue !important;
+  color: white !important;
+  border-color: $blue;
+}
+.border-bottom-1 {
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 2px solid $light-gray !important;
+}
+
+.heading {
+  margin: 1.5rem 0;
+  color: $dark;
+  font-weight: bold;
+}
+
+.flex-1 {
+  flex: 1 !important;
+}
+
+ul {
+  list-style-type: none;
+
+  li {
+    list-style: none;
+  }
+}
+
+.container {
+  width: 100%;
+  padding-left: 0.6rem !important;
+  padding-right: 0.6rem !important;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+.w-100 {
+  width: 100%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+input,
+select {
+  border-color: $light-gray !important;
+  &:focus {
+    background-color: $primary-color !important;
+    // color: white;
+    ::placeholder {
+      color: white;
+    }
+  }
+}
